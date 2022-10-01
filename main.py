@@ -58,8 +58,13 @@ data = {"date":{"value":da,"color":get_random_color()},
         "birthday_left":{"value":get_birthday(),"color":get_random_color()},
         "words":{"value":get_words(),"color":get_random_color()},
         "highest": {"value":highest,"color":get_random_color()},
-        "lowest":{"value":lowest, "color":get_random_color()}},
-
+        "lowest":{"value":lowest, "color":get_random_color()},
+        "s_province":{"value":s_pro,"color":get_random_color()},
+        "s_city":{"value":s_ci,"color":get_random_color()},
+        "s_weather":{"value":s_wea,"color":get_random_color()},
+        "s_temperature":{"value":s_tem,"color":get_random_color()},
+        "s_highest": {"value":s_highest,"color":get_random_color()},
+        "s_lowest":{"value":s_lowest, "color":get_random_color()}},
 count = 0
 for user_id in user_ids:
   res = wm.send_template(user_id, template_id, data)
