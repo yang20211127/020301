@@ -49,7 +49,22 @@ client = WeChatClient(app_id, app_secret)
 wm = WeChatMessage(client)
 da, wea, pro, ci, temperature, highest, lowest = get_weather(city[0])
 da, s_wea, s_pro, s_ci, s_tem, s_highest, s_lowest = get_weather(city[1])
-data = {"date":{"value":da,"color":get_random_color()},"province":{"value":pro,"color":get_random_color()},"city":{"value":ci,"color":get_random_color()},"weather":{"value":wea,"color":get_random_color()},"temperature":{"value":temperature,"color":get_random_color()},"love_days":{"value":get_count(),"color":get_random_color()},"birthday_left":{"value":get_birthday(),"color":get_random_color()},"words":{"value":get_words(),"color":get_random_color()},"highest": {"value":highest,"color":get_random_color()},"lowest":{"value":lowest, "color":get_random_color()},"s_province":{"value":s_pro,"color":get_random_color()},"s_city":{"value":s_ci,"color":get_random_color()},"s_weather":{"value":s_wea,"color":get_random_color()},"s_temperature":{"value":s_tem,"color":get_random_color()},"s_highest": {"value":s_highest,"color":get_random_color()},"s_lowest":{"value":s_lowest, "color":get_random_color()}}
+data = {"date":{"value":da,"color":get_random_color()},
+        "province":{"value":pro,"color":get_random_color()},
+        "city":{"value":ci,"color":get_random_color()},
+        "weather":{"value":wea,"color":get_random_color()},
+        "temperature":{"value":temperature,"color":get_random_color()},
+        "love_days":{"value":get_count(),"color":get_random_color()},
+        "birthday_left":{"value":get_birthday(),"color":get_random_color()},
+        "words":{"value":get_words(),"color":get_random_color()},
+        "highest": {"value":highest,"color":get_random_color()},
+        "lowest":{"value":lowest, "color":get_random_color()},
+        "s_province":{"value":s_pro,"color":get_random_color()},
+        "s_city":{"value":s_ci,"color":get_random_color()},
+        "s_weather":{"value":s_wea,"color":get_random_color()},
+        "s_temperature":{"value":s_tem,"color":get_random_color()},
+        "s_highest": {"value":s_highest,"color":get_random_color()},
+        "s_lowest":{"value":s_lowest, "color":get_random_color()}}
 count = 0
 for user_id in user_ids:
   res = wm.send_template(user_id, template_id, data)
