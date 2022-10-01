@@ -64,8 +64,8 @@ data = {"date":{"value":da,"color":get_random_color()},
         "s_weather":{"value":s_wea,"color":get_random_color()},
         "s_temperature":{"value":s_tem,"color":get_random_color()},
         "s_highest": {"value":s_highest,"color":get_random_color()},
-        "s_lowest":{"value":s_lowest, "color":get_random_color()}},
-count = 0
+        "s_lowest":{"value":s_lowest, "color":get_random_color()}}
+count = 0 
 for user_id in user_ids:
   res = wm.send_template(user_id, template_id, data)
   count+=1
